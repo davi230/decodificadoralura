@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Decodificador</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__logo">a</h1>
+    </header>
+    <main class="decodificador">
+        <section class="decodificador__texto">
+            <textarea placeholder="Digite seu texto" class="decodificador__texto__digitar"></textarea>
+            <div class="decodificador__texto__conteudo">
+                <p class="decodificador__texto__aviso"><span>!</span> Apenas letras minúsculas e sem acento.</p>
+                <div class="decodificador__texto__botoes">
+                    <button class="decodificador__texto__botao-criptografar" onclick="opcao('criptografar')">Criptografar</button>
+                    <button class="decodificador__texto__botao-descriptografar" onclick="opcao('descriptografar')">Descriptografar</button>
+                </div>
+            </div>
+        </section>
+        <section class="decodificador__apresentacao">
+            <div class="decodificador__apresentacao__info">
+                <p class="decodificador__apresentacao__traduzido" id="result"></p>
+                <img class="decodificador__apresentacao__img" src="img/Garota.png" alt="desenho de uma garota de colete azul com uma lupa na mão vendo um diamante">
+                <h2 class="decodificador__apresentacao__titulo">Nenhuma mensagem encontrada</h2>
+                <p class="decodificador__apresentacao__texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <button class="decodificador__apresentacao__botao-copiar" onclick="copiarTexto()">Copiar texto</button>
+        </section>
+    </main>
+    <!--<footer class="rodape">
+        <p class="rodape__autor">Davi Moraes - 2024</p>
+    </footer>-->
+    <script src="app.js"></script> 
+</body>
+</html>

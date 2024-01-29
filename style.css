@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+:root {
+    --cor-primaria: #E5E5E5;
+    --cor-secundaria: #FFFFFF;
+    --cor-tercearia: #0A3871;
+    --cor-quartenaria: #495057;
+    --cor-quintenaria: #343A40;
+    --cor-hover1: #104586;
+
+    --fonte-primaria:'inter', sans-serif;  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: var(--cor-primaria);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
+
+}
+.cabecalho {
+    padding: 40px 0px 0px 0px;
+}
+
+.cabecalho__logo {
+    font-family: 'Ubuntu';
+    color: var(--cor-tercearia);
+    font-size: 4.375rem;
+}
+.decodificador {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 7%;/**/
+}
+
+.decodificador__apresentacao {
+    background-color: var(--cor-secundaria);
+    width: 35%;
+    padding: 10% 0;
+    /* height: 85%; */
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 3% 0% 3% 0%;
+    box-shadow: 2px 2px 20px #b8b8b8;
+}
+
+.decodificador__texto__digitar {
+    width: 100%;
+    /*height: 500px;*/
+    padding: 0 0 68% 0;
+    background-color: var(--cor-primaria);
+    resize: none;
+    border: none;
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    color: var(--cor-tercearia);
+    outline: none;
+}
+
+.decodificador__texto__digitar::placeholder {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-tercearia);
+    font-size: 2rem;
+    border: none;
+}
+
+.decodificador__texto__digitar:focus {
+    border: none;
+}
+
+.decodificador__texto__aviso {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-quartenaria);
+    padding: 2% 0%;
+}
+
+span {
+    background-color: var(--cor-quartenaria);
+    padding: 1px 9px;
+    border-radius: 12px;
+    color: var(--cor-primaria);
+}
+
+.decodificador__texto__botoes {
+    display: flex;
+    gap: 5%;
+}
+
+button {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+}
+
+.decodificador__texto__botao-criptografar {
+    background-color: var(--cor-tercearia);
+    color: var(--cor-secundaria);
+}
+
+.decodificador__texto__botao-descriptografar {
+    background-color: var(--cor-primaria);
+    color: var(--cor-tercearia);
+    border: 2px solid var(--cor-tercearia);
+}
+
+.decodificador__apresentacao__botao-copiar {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-tercearia);
+    border: 2px solid var(--cor-tercearia);
+    align-self: center;
+    margin-top: 9%;
+}
+
+.decodificador__apresentacao__traduzido {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-quartenaria);
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    word-break: break-word;
+    padding: 5%;
+}
+
+.decodificador__apresentacao__titulo {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-quintenaria);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 7.5%;
+    
+    
+}
+
+.decodificador__apresentacao__texto {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-quartenaria);
+    font-size: 1rem;
+    text-align: center;
+    padding: 0% 10%;
+}
+
+.decodificador__texto__botao-criptografar:hover {
+    background-color: var(--cor-hover1);
+    transition: 0.5s;
+}
+
+.decodificador__texto__botao-descriptografar:hover {
+    background-color: var(--cor-secundaria);
+    transition: 0.5s;
+}
+
+.decodificador__apresentacao__botao-copiar:hover {
+    background-color: var(--cor-primaria);
+    transition: 0.5s;
+}
+
+@media (max-width: 1200px){
+    .decodificador {
+        width: 90%;
+        padding: 5%;
+    }
+    button {
+        width: 250px;
+    }
+
+    .decodificador__apresentacao__img {
+        width: 75%;
+    }
+
+}
+
+@media (max-width: 870px){
+    .decodificador {
+        width: 100%;
+        padding: 1%;
+    }
+    button {
+        width: 150px;
+    }
+
+    .decodificador__apresentacao__img {
+        width: 75%;
+    }
+
+}
+
+@media (max-width: 620px){
+    .decodificador {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    button {
+        width: 150px;
+    }
+    .decodificador__apresentacao {
+        width: 80%;
+        padding: 2%;
+
+    }
+
+    .decodificador__apresentacao__img {
+        width: 75%;
+    }
+
+}
