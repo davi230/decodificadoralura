@@ -1,6 +1,8 @@
 # Decodificador
 Challenge da Semana - Alura
 
+Para acessarem o Decodificador (https://decodificadoralura.vercel.app/)
+
 Este projeto implementa uma aplicação simples para criptografar e descriptografar mensagens, utilizando chaves específicas para substituir letras. A ideia é permitir a troca de mensagens secretas entre pessoas que conheçam as regras de criptografia utilizadas.
 
 ## Chaves de Criptografia
