@@ -45,6 +45,9 @@ function copiarTexto() {
     alert('Texto copiado para a área de transferência!');
 }
 
+let btnCopiar = document.querySelector('.decodificador__apresentacao__botao-copiar');
+btnCopiar.style.visibility = 'hidden';
+
 function atualizarElementos() {
     // Obter o elemento da textarea
     let textareaElemento = document.querySelector('textarea');
@@ -53,7 +56,7 @@ function atualizarElementos() {
     let imgElemento = document.querySelector('.decodificador__apresentacao__info img');
     let h2Elemento = document.querySelector('.decodificador__apresentacao__titulo');
     let pElemento = document.querySelector('.decodificador__apresentacao__texto');
-    let pTraduzido = document.querySelector('.decodificador__apresentacao__traduzido')
+    let pTraduzido = document.querySelector('.decodificador__apresentacao__traduzido'); 
 
     // Verificar se o elemento está presente
     if (textareaElemento) {
@@ -62,13 +65,13 @@ function atualizarElementos() {
             // Se estiver vazio, mostrar os elementos
             pTraduzido.textContent = '';
             mostrarElementos(imgElemento, h2Elemento, pElemento);
+            btnCopiar.style.visibility = 'hidden';
         } else {
             // Se houver conteúdo, esconder os elementos
             esconderElementos(imgElemento, h2Elemento, pElemento);
+            btnCopiar.style.visibility = 'visible';
         }
-    } else {
-        console.log('Elemento textarea não encontrado.');
-    }
+    } 
 }
 
 function mostrarElementos(...elementos) {
