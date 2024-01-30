@@ -59,6 +59,9 @@ body {
 
 .decodificador__texto__digitar {
     width: 100%;
+    box-sizing: border-box; /**/
+    max-width: 100%; /**/
+    margin: 0; /**/
     /*height: 500px;*/
     padding: 0 0 68% 0;
     background-color: var(--cor-primaria);
@@ -170,53 +173,30 @@ button {
     transition: 0.5s;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 768px) {
     .decodificador {
-        width: 90%;
-        padding: 5%;
-    }
-    button {
-        width: 250px;
+        flex-direction: column; /* Muda para uma pilha em telas menores */
+        gap: 5%; /* Reduz o espaçamento entre os elementos */
     }
 
-    .decodificador__apresentacao__img {
-        width: 75%;
-    }
-
-}
-
-@media (max-width: 870px){
-    .decodificador {
-        width: 100%;
-        padding: 1%;
-    }
-    button {
-        width: 150px;
-    }
-
-    .decodificador__apresentacao__img {
-        width: 75%;
-    }
-
-}
-
-@media (max-width: 620px){
-    .decodificador {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    button {
-        width: 150px;
-    }
     .decodificador__apresentacao {
-        width: 80%;
-        height: 55%;
-        padding: 2%;
-
+        width: 100%; /* Ocupa a largura total em telas menores */
+        margin: 5% 0; /* Reduz a margem superior e inferior */
     }
 
-    .decodificador__apresentacao__img {
-        width: 75%;
+    .decodificador__texto__digitar {
+        padding: 0 0 20px 0; /* Reduz o preenchimento inferior */
     }
 
+    .decodificador__texto__botoes {
+        flex-direction: column; /* Muda para uma pilha em telas menores */
+    }
+
+    button {
+        margin-bottom: 10px; /* Adiciona espaço entre os botões */
+    }
+
+    img {
+        display: none;
+    }
 }
